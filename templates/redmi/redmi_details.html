@@ -1,0 +1,9 @@
+{% include 'header.html' %}
+<div style="display: flex">
+    <img src="{{ redmi_id.image.url }}" width="500" height="350" alt="{{redmi.image}}">
+    <h1 style="font-size: 24px; color: mediumaquamarine">Модель: {{redmi_id.name}}</h1>
+    <p style="font-size: 18px; color: blue">Характеристека: {{ redmi_id.specifications }}</p>
+    <h1 style="font-size: 32px">Цена: {{ redmi_id.price }} сом</h1>
+</div>
+{% include 'footer.html' %}
+

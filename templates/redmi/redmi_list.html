@@ -1,0 +1,14 @@
+{% include 'header.html' %}
+
+{% for redmi in redmis %}
+<div>
+    <center>
+        <h1 style="font-size: 24px">{{ redmi.name }}</h1>
+        <img src="{{ redmi.image.url }}" width="250" height="300">
+        <h2 style="font-size: 22px">{{ redmi.price }}</h2>
+        <a href="{% url 'details_view' redmi.id %}"><p style="font-size: 18px">Подробнее</p></a>
+     </center>
+</div>
+{% endfor %}
+
+{% include 'footer.html' %}
