@@ -1,0 +1,21 @@
+{% load static %}
+{% include 'header.html' %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<div class="delete">
+    <center>
+
+        <h1 class="del">Вы уверенны что хотите удалить?</h1>
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <button type="submit" class="yes">ДА</button>
+            <a href="{% url 'list_view' %}"><button type="submit" class="no">НЕТ</button></a>
+        </form>
+
+
+    </center>
+</div>
+
+
+{% include 'footer.html' %}

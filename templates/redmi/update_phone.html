@@ -1,0 +1,17 @@
+{% load static %}
+{% include 'header.html' %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<a href="{% url 'list_view' %}"><button type="submit" class="upd3">Назад</button></a>
+<form class="decor" method="POST" enctype="multipart/form-data">
+
+    <h3 class="upd">Изменить данный</h3>
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="upd1">Сохранить</button>
+    <button type="reset" class="upd2">Очистить</button>
+
+</form>
+
+{% include 'footer.html' %}

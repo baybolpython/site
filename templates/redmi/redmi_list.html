@@ -1,14 +1,21 @@
+{% load static %}
 {% include 'header.html' %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
 
+<a href="{% url 'create_phone_view' %}"><button class="add">ADD</button></a>
 {% for redmi in redmis %}
-<div>
+
+
     <center>
-        <h1 style="font-size: 24px">{{ redmi.name }}</h1>
+        <a href="{% url 'details_view' redmi.id %}"><h1 style="font-size: 24px">{{ redmi.name }}</h1></a>
         <img src="{{ redmi.image.url }}" width="250" height="300">
-        <h2 style="font-size: 22px">{{ redmi.price }}</h2>
-        <a href="{% url 'details_view' redmi.id %}"><p style="font-size: 18px">Подробнее</p></a>
-     </center>
-</div>
+        <h2 style="font-size: 22px" class="price1">{{ redmi.price }}</h2>
+        <a href="{% url 'details_view' redmi.id %}" class="pod1"></a>
+        <a href="{% url 'delete_phone_view' redmi.id %}"><button class="uda">Удалить</button></a>
+        <a href="{% url 'update_phone_view' redmi.id %}"><button class="izm">Изменить</button></a>
+    </center>
+
+
 {% endfor %}
 
 {% include 'footer.html' %}

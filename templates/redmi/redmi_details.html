@@ -1,9 +1,23 @@
+{% load static %}
 {% include 'header.html' %}
-<div style="display: flex">
-    <img src="{{ redmi_id.image.url }}" width="500" height="350" alt="{{redmi.image}}">
-    <h1 style="font-size: 24px; color: mediumaquamarine">Модель: {{redmi_id.name}}</h1>
-    <p style="font-size: 18px; color: blue">Характеристека: {{ redmi_id.specifications }}</p>
-    <h1 style="font-size: 32px">Цена: {{ redmi_id.price }} сом</h1>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<div class="det">
+    <img src="{{ redmi_id.image.url }}" width="500" height="350" class="img2" alt="{{redmi.image}}">
+    <h1 style="font-size: 24px; color: mediumaquamarine" class="model">Модель: {{redmi_id.name}}</h1>
+    <p style="font-size: 18px; color: blue" class="harac">Характеристека: {{ redmi_id.specifications }}</p>
+    <h1 style="font-size: 32px" class="price">Цена: {{ redmi_id.price }} сом</h1>
 </div>
+
+<h3>Отзыв</h3>
+
+<ol class="reviews-list">
+    {% for i in redmi_id.redmi.all %}
+    <li class="review-item">
+        <h3>Оценка: {{ i.stars }} звезд</h3>
+        <p>{{ i.text }}</p>
+        <small>Дата отзыва: {{ i.created_at }}</small>
+    </li>
+    {% endfor %}
+</ol>
 {% include 'footer.html' %}
 
