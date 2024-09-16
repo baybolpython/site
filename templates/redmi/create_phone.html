@@ -1,17 +1,19 @@
 {% load static %}
 {% include 'header.html' %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
-<a href="{% url 'list_view' %}" class="create3"><button type="submit">Назад</button></a>
-<form action="{% url 'create_phone_view' %}" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div class="crea">
+    <a href="{% url 'list_view' %}"><button type="submit" class="upd3">Назад</button></a>
+    <form action="{% url 'create_phone_view' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
 
 
-        <button type="submit" class="create1">Сохранить</button>
-        <button type="reset" class="create2">Очистить</button>
+            <button type="submit" class="create1">Сохранить</button>
+            <button type="reset" class="create2">Очистить</button>
 
 
 
-</form>
-
+    </form>
+</div>
 {% include 'footer.html' %}

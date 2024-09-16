@@ -5,26 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74a31abe-c30d-4557-9312-744609741db4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/media/redmi_images/13_u6n9LvX.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redmi/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redmi/migrations/0002_alter_redmi_options_alter_redmi_image_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redmi/migrations/0003_redmi_sim_card.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redmi/migrations/0004_xiaomi_alter_redmi_options_comment_redmi_xiaomi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/redmi/create_phone.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/redmi/delete_redmi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/redmi/update_phone.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/redmi_images/14_qxE05t6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redmi/migrations/0005_alter_comment_redmi_remove_redmi_xiaomi_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redmi/migrations/0006_delete_comment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redmi/migrations/0007_comment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/rain.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/redmi/add_comment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redmi/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/redmi/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redmi/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/redmi/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redmi/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/redmi/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redmi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/redmi/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redmi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/redmi/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redmi/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/redmi/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/redmi/create_phone.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/redmi/create_phone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/redmi/delete_redmi.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/redmi/delete_redmi.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/redmi/redmi_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/redmi/redmi_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/redmi/redmi_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/redmi/redmi_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/redmi/update_phone.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/redmi/update_phone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/section.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -71,6 +77,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\Xiaomi\static\css" />
       <recent name="C:\Users\user\PycharmProjects\Xiaomi\templates\redmi\img" />
       <recent name="C:\Users\user\PycharmProjects\Xiaomi\templates\redmi" />
     </key>
@@ -130,7 +137,14 @@
       <workItem from="1725170547557" duration="5750000" />
       <workItem from="1725348571869" duration="7622000" />
       <workItem from="1725451997715" duration="4569000" />
-      <workItem from="1725691704060" duration="12634000" />
+      <workItem from="1725691704060" duration="24038000" />
+      <workItem from="1725888463235" duration="2836000" />
+      <workItem from="1726207916068" duration="1363000" />
+      <workItem from="1726291439969" duration="1257000" />
+      <workItem from="1726314329056" duration="103000" />
+      <workItem from="1726371137932" duration="19196000" />
+      <workItem from="1726477642400" duration="5253000" />
+      <workItem from="1726493498873" duration="2991000" />
     </task>
     <servers />
   </component>
@@ -153,12 +167,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main/settings.py</url>
-          <line>119</line>
+          <line>130</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/urls.py</url>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/redmi/redmi_details.html</url>
-          <line>22</line>
+          <line>42</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

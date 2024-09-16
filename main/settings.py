@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,12 +20,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
+load_dotenv()
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c7y4$6f-$*8k2_f**)426qw&)x@sw9hd#0qnh1thlg=#xey*d0'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ.get("DEBUG") == 'on':
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -38,8 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'redmi'
+    'redmi',
+
+
+
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -116,6 +124,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
+
+# LOGIN_REDIRECT_URL = 'list_view'  # Указываем URL для перенаправления после входа
+# LOGOUT_REDIRECT_URL = 'list_view'  # Указываем URL для перенаправления после выхода
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'

@@ -1,23 +1,43 @@
 {% load static %}
 {% include 'header.html' %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
-<div class="det">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<a href="{% url 'list_view' %}"><button type="submit" class="upd3">Назад</button></a>
+<div class="details">
+
     <img src="{{ redmi_id.image.url }}" width="500" height="350" class="img2" alt="{{redmi.image}}">
     <h1 style="font-size: 24px; color: mediumaquamarine" class="model">Модель: {{redmi_id.name}}</h1>
     <p style="font-size: 18px; color: blue" class="harac">Характеристека: {{ redmi_id.specifications }}</p>
     <h1 style="font-size: 32px" class="price">Цена: {{ redmi_id.price }} сом</h1>
 </div>
 
-<h3>Отзыв</h3>
+<h3>Добавить комментарий</h3>
 
-<ol class="reviews-list">
-    {% for i in redmi_id.redmi.all %}
-    <li class="review-item">
-        <h3>Оценка: {{ i.stars }} звезд</h3>
-        <p>{{ i.text }}</p>
-        <small>Дата отзыва: {{ i.created_at }}</small>
-    </li>
-    {% endfor %}
-</ol>
-{% include 'footer.html' %}
+{% if request.user.is_authenticated %}
+    <form method="post">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+{% else %}
+    <p>Вы должны быть <a href="#">войти</a>, чтобы оставить комментарий.</p>
+{% endif %}
+
+
+<h2>Комментарии</h2>
+
+{% if comments %}
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <strong>{{ comment.author }}</strong> - {{ comment.created_at }}
+                <p>{{ comment.content }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Комментариев пока нет.</p>
+{% endif %}
+
+
+
 

@@ -1,11 +1,7 @@
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
-
-class Xiaomi(models.Model):
-    name = models.CharField(max_length=200)
-
-    def __str__(self):
-        return self.name
+from django.utils import timezone
+from django.contrib.auth.models import User
 
 SIM_CARDS = (
     ('O!', 'O!'),
@@ -15,13 +11,13 @@ SIM_CARDS = (
 
 
 class Redmi(models.Model):
-    name = models.CharField(max_length=200, verbose_name='Имя')
+    name = models.CharField(max_length=200, verbose_name='Название')
     image = models.ImageField(upload_to='redmi_images/', verbose_name='Фото')
     specifications = models.TextField(verbose_name='Характеристека')
     sim_card = models.CharField(max_length=10, choices=SIM_CARDS, verbose_name='Sim_card')
     price = models.IntegerField(default=0, verbose_name='Цена')
     created_at = models.DateTimeField(auto_now_add=True)
-    # xiaomi = models.ForeignKey(Xiaomi, on_delete=models.CASCADE, null=True)
+
 
     def __str__(self):
         return self.name
@@ -31,18 +27,18 @@ class Redmi(models.Model):
         verbose_name_plural = "редми"
 
 
-
-
-
 class Comment(models.Model):
-    redmi = models.ForeignKey(Redmi, on_delete=models.CASCADE, related_name='redmi', null=True)
-    text = models.TextField()
-    stars = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    post = models.ForeignKey('Redmi', on_delete=models.CASCADE, related_name='comments')  # Связь с моделью постов
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField()
+    created_at = models.DateTimeField(default=timezone.now)
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.stars} - {self.redmi}"
+        return f'Comment by {self.author} on {self.post}'
 
     class Meta:
-        verbose_name = "Коментарий"
-        verbose_name_plural = "Коментарии"
+        ordering = ['-created_at']
+
+
+

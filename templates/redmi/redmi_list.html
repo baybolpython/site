@@ -1,9 +1,11 @@
 {% load static %}
 {% include 'header.html' %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
 
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 <a href="{% url 'create_phone_view' %}"><button class="add">ADD</button></a>
+
 {% for redmi in redmis %}
+
 
 
     <center>
